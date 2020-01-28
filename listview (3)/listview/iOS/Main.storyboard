@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="219">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="209">
+            <objects>
+                <tableViewController id="210" sceneMemberID="viewController" customClass="MainViewController" storyboardIdentifier="MainViewController">
+                    <navigationItem title="Contact" id="2595" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="2598" systemItem="add">
+                            <connections>
+                                <action selector="AddNewContac:" destination="210" id="4181"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <tableView clipsSubviews="YES" 
+                               contentMode="scaleToFill" 
+                               alwaysBounceVertical="YES" 
+                               dataMode="prototypes" 
+                               style="plain" 
+                               separatorStyle="default" 
+                               rowHeight="-1" 
+                               estimatedRowHeight="-1" 
+                               sectionHeaderHeight="28" 
+                               sectionFooterHeight="28" 
+                               id="9899"
+                               key="view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9900" customClass="ContactCell" rowHeight="98" reuseIdentifier="user_id">
+                                <rect key="frame" x="0.0" y="28" width="414" height="98"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9900" id="9901">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9902" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                            <rect key="frame" x="20" y="14" width="70" height="70"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="35"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9940" translatesAutoresizingMaskIntoConstraints="NO" ambiguous="YES">
+                                            <rect key="frame" x="123" y="20" width="271" height="23"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9941" translatesAutoresizingMaskIntoConstraints="NO" ambiguous="YES">
+                                            <rect key="frame" x="123" y="51" width="271" height="20"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="9919" firstAttribute="bottomMargin" secondItem="9902" secondAttribute="bottom" constant="3"/>
+                                        <constraint id="9936" firstItem="9902" firstAttribute="leading" secondItem="9901" secondAttribute="leadingMargin"/>
+                                        <constraint id="9939" firstItem="9902" firstAttribute="top" secondItem="9901" secondAttribute="topMargin" constant="3"/>
+                                        <constraint id="10055" firstItem="9940" firstAttribute="leading" secondItem="9901" secondAttribute="leadingMargin" constant="103"/>
+                                        <constraint id="10091" firstAttribute="trailingMargin" secondItem="9940" secondAttribute="trailing"/>
+                                        <constraint id="10094" firstItem="9940" firstAttribute="top" secondItem="9901" secondAttribute="topMargin" constant="9"/>
+                                        <constraint id="10160" firstAttribute="trailingMargin" secondItem="9941" secondAttribute="trailing"/>
+                                        <constraint id="10163" firstAttribute="bottomMargin" secondItem="9941" secondAttribute="bottom" constant="16"/>
+                                        <constraint id="10165" firstItem="9941" firstAttribute="top" secondItem="9940" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="10205" firstItem="9941" firstAttribute="leading" secondItem="9901" secondAttribute="leadingMargin" constant="103"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="10" bottom="30" right="10"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="_contactImage" destination="9902" id="name-outlet-9902"/>
+                                    <outlet property="_fNameContact" destination="9940" id="name-outlet-9940"/>
+                                    <outlet property="_phoneContact" destination="9941" id="name-outlet-9941"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </tableView>
+                    <connections>
+                        <outlet property="ContactsTableView" destination="9899" id="name-outlet-9899"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="217" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="-60"/>
+        </scene>
+        <scene sceneID="218">
+            <objects>
+                <navigationController id="219" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="221">
+                        <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="2596" destination="210" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="222" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="3191" translatesAutoresizingMaskIntoConstraints="NO">
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" header="YES"/>
+                    </accessibility>
+                </navigationItem>
+            </objects>
+            <point key="canvasLocation" x="-451" y="-60"/>
+        </scene>
+        <scene sceneID="10436">
+            <objects>
+                <viewController id="10437" sceneMemberID="viewController" customClass="ContactProfileViewController" storyboardIdentifier="ContactProfileViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="10434"/>
+                        <viewControllerLayoutGuide type="bottom" id="10435"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="10438">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="10456" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="132" y="66" width="150" height="150"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10480" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="115" y="286.5" width="198" height="20.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10481" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="115" y="330" width="198" height="20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="10475" firstItem="10456" firstAttribute="leading" secondItem="10438" secondAttribute="leadingMargin" constant="112"/>
+                            <constraint id="10476" firstAttribute="trailingMargin" secondItem="10456" secondAttribute="trailing" constant="112"/>
+                            <constraint id="10477" firstItem="10456" firstAttribute="top" secondItem="10434" secondAttribute="bottom" constant="46"/>
+                            <constraint id="10518" firstItem="10480" firstAttribute="leading" secondItem="10438" secondAttribute="leadingMargin" constant="95"/>
+                            <constraint id="10521" firstAttribute="trailingMargin" secondItem="10480" secondAttribute="trailing" constant="81"/>
+                            <constraint id="10522" firstItem="10480" firstAttribute="top" secondItem="10456" secondAttribute="bottom" constant="52"/>
+                            <constraint id="10620" firstItem="10481" firstAttribute="leading" secondItem="10438" secondAttribute="leadingMargin" constant="95"/>
+                            <constraint id="10623" firstAttribute="trailingMargin" secondItem="10481" secondAttribute="trailing" constant="81"/>
+                            <constraint id="10626" firstItem="10435" firstAttribute="top" secondItem="10481" secondAttribute="bottom" constant="386"/>
+                            <constraint id="10663" firstItem="10481" firstAttribute="top" secondItem="10480" secondAttribute="bottom" constant="23"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_detalisImage" destination="10456" id="name-outlet-10456"/>
+                        <outlet property="_detalisUser" destination="10480" id="name-outlet-10480"/>
+                        <outlet property="_detalisPhone" destination="10481" id="name-outlet-10481"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10439" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="-61"/>
+        </scene>
+    </scenes>
+</document>
